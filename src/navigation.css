@@ -1,0 +1,425 @@
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid orangered;
+  width: 5vw;
+  height: 5vw;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/**/
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.ll{
+  position:fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
+}
+
+.buttonss{
+  background-color: orangered;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+.buttonss:hover {
+  background-color: rgb(255, 217, 0);
+}
+
+.button1:hover {
+  background-color: rgb(255, 217, 0);
+}
+
+.mydiv{
+  position: relative;
+  /* padding-top: 4em; */
+  width: 100%;
+  z-index:auto;
+}
+
+
+.glow {
+  font-size: 5vh;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ffd485, 0 0 20px #ffc457, 0 0 30px #ffbb3d, 0 0 40px #ffa805, 0 0 50px #ffa805, 0 0 60px #ffa805, 0 0 70px #ffa805;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff8585 0 0 40px #ff4d4d, 0 0 50px #ff4747, 0 0 60px #ff3333, 0 0 70px #ff0f0f, 0 0 80px #ff0f0f;
+    /* text-shadow: 0 0 20px #ffa805, 0 0 30px #ffa805, 0 0 40px #ffa805, 0 0 50px #ffbb3d, 0 0 60px #ffbb3d, 0 0 70px #ffc457, 0 0 80px #ffd485; */
+  }
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #e7a311;
+}
+
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+  background: #e7a311;
+}
+
+li ul { display: none; }
+
+ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+ul li a:hover { background: #eb5d0b; }
+
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+li:hover li { float: none; }
+
+li:hover a { background: #e7a311; }
+
+li:hover li a:hover { background: #eb5d0b; }
+
+.main-navigation li ul li { border-top: 0; position: fixed;}
+
+ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+ul:before,
+ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+ul:after { clear: both; }
+
+
+/*lllllllllllllllllllllllllllllllllllllllllllllllllllllllllll*/
+.responsive {
+  width: 100%;
+  height:auto;
+  max-height: 600px;
+}
+
+/*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*/
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+  color: #e7a311;
+}
+
+.fa:hover {
+  color: orangered;
+}
+/**/
+
+.navbar {
+  background-color: #e7a311;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar a:hover {
+  background: orangered;
+  color: black;
+}
+
+.fixedbar{
+  position: fixed;
+  top: 0;
+  width:100%;
+}
+
+.fixedbar1{
+  width:100%;
+}
+
+.fa fa-bolt{
+  color: white;
+  font-size:24px;
+}
+
+.nav navbar-nav navbar-right{
+  color: orangered;
+}
+/**/
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  top:0;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.modal-dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  /* right: 15px; */
+  right: 1px;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus,.form-container input[type=email]:focus  {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: orange;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: orangered;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+/**/
+input[type=text] select, textarea {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.pass {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+
+.button1{
+  background-color: orangered;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.delete_channel_button{
+  margin-left: 8vw;
+  align-content: center;
+  width:80%;
+  background-color: orangered;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+.update_channel_button{
+  margin-left: 8vw;
+  align-content: center;
+  width:80%;
+  background-color: orange;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+.update_channel_button:hover{
+  background-color: rgb(255, 238, 0);
+}
+
+.delete_channel_button:hover{
+  background-color: rgb(255, 238, 0);
+}
+
+.container1 {
+  border-radius: 5px;
+  width:100%;
+  background-color: orange;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/**/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.searchd{
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: scroll;
+  max-height: '10vh';
+  border: 1px solid #ddd;
+  z-index: 13;
+  position: fixed;
+}
+.searchd::-webkit-scrollbar {
+  display: none;
+}
+/**/
